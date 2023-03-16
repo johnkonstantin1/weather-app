@@ -118,7 +118,49 @@ h1 {
   background-image: url("path/to/cold-background.jpg");
 } */
 
+.day1 .normal{
+  background-image: url("./assets/day1.avif");
+}
 
+.day2 .hot{
+  background-image: url("./assets/day2.avif");
+}
+
+.day3 .cold{
+  background-image: url("./assets/day3rain.avif");
+}
+
+.day4 .cold{
+  background-image: url("./assets/day4snow.avif");
+}
+
+.night1 .normal {
+  background-image: url("./assets/night1fog.avif");
+}
+
+.night2 .hot {
+  background-image: url("./assets/night2rain.avif");
+}
+
+.night3 .cold {
+  background-image: url("./assets/night3clouds.avif");
+}
+
+.night4 .hot {
+  background-image: url("./assets/night4starts.avif");
+}
+
+/* .hot {
+  background-color: #ff5733;
+}
+
+.cold {
+  background-color: #33aaff;
+}
+
+.normal {
+  background-color: #f2f2f2;
+} */
 
 
 

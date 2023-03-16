@@ -17,13 +17,28 @@ function App() {
     }
   };
   
-  function getBackground (){
-    if (this.state.temp >= 30) {
-      return "hot";
-    } else {
-      return "cold";
+  function getBackground() {
+    const now = new Date();
+    const hour = now.getHours();
+    const isDaytime = hour >= 6 && hour < 18;
+  
+    let backgroundClass = "day"; // Default background class for daytime
+  
+    if (!isDaytime) {
+      backgroundClass = "night"; // Use nighttime background class
     }
-  } 
+  
+    // Check temperature range to set background image
+    if (this.state.temp >= 30) {
+      backgroundClass += " hot";
+    } else if (this.state.temp < 10) {
+      backgroundClass += " cold";
+    } else {
+      backgroundClass += " normal";
+    }
+  
+    return backgroundClass;
+  }
 
   return (
     <div className="app">

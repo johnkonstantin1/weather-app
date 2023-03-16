@@ -93,11 +93,13 @@ h1 {
 }
 
 .bottom {
+
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
   margin: 1rem auto;
+  margin-top: 400px;
   padding: 1rem;
   border-radius: 12px;
   background-color: rgba(255,255,255, 0.2);
@@ -106,6 +108,14 @@ h1 {
 
 .bold {
   font-weight: 700;
+}
+
+.hot {
+  background-image: url("path/to/hot-background.jpg");
+}
+
+.cold {
+  background-image: url("path/to/cold-background.jpg");
 }
 
 

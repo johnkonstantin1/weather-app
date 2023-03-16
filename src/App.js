@@ -16,6 +16,14 @@ function App() {
       setLocation("");
     }
   };
+  
+  function getBackground (){
+    if (this.state.temp >= 30) {
+      return "hot";
+    } else {
+      return "cold";
+    }
+  } 
 
   return (
     <div className="app">

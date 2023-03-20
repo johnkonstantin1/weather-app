@@ -120,7 +120,7 @@ function App() {
               {data.list &&
                 data.list.slice(5, 6).map((item, index) => (
                   <div className="forecast" key={index}>
-                    <p>
+                    <p className="date-c">
                       {new Date(item.dt * 1000).toLocaleDateString("en-US", {
                         weekday: "long",
                         // year: "numeric",
@@ -128,19 +128,20 @@ function App() {
                         // day: "numeric",
                       })}
                     </p>
-                    <p>{item.weather[0].main}</p>
-                    <p>{item.main.temp.toFixed()}°C</p>
+                    <p className="description-c">{item.weather[0].main}</p>
+                    <p className="temperature-c">
+                      {item.main.temp.toFixed()}°C
+                    </p>
                   </div>
                 ))}
             </div>
-            
           </div>
           <div className="column">
             <div className="card">
               {data.list &&
                 data.list.slice(13, 14).map((item, index) => (
                   <div className="forecast" key={index}>
-                    <p>
+                    <p className="date-c">
                       {new Date(item.dt * 1000).toLocaleDateString("en-US", {
                         weekday: "long",
                         // year: "numeric",
@@ -148,19 +149,20 @@ function App() {
                         // day: "numeric",
                       })}
                     </p>
-                    <p>{item.weather[0].main}</p>
-                    <p>{item.main.temp.toFixed()}°C</p>
+                    <p className="description-c">{item.weather[0].main}</p>
+                    <p className="temperature-c">
+                      {item.main.temp.toFixed()}°C
+                    </p>
                   </div>
                 ))}
             </div>
-            
           </div>
           <div className="column">
             <div className="card">
               {data.list &&
                 data.list.slice(23, 24).map((item, index) => (
                   <div className="forecast" key={index}>
-                    <p>
+                    <p className="date-c">
                       {new Date(item.dt * 1000).toLocaleDateString("en-US", {
                         weekday: "long",
                         // year: "numeric",
@@ -168,15 +170,15 @@ function App() {
                         // day: "numeric",
                       })}
                     </p>
-                    <p>{item.weather[0].main}</p>
-                    <p>{item.main.temp.toFixed()}°C</p>
+                    <p className="description-c">{item.weather[0].main}</p>
+                    <p className="temperature-c">
+                      {item.main.temp.toFixed()}°C
+                    </p>
                   </div>
                 ))}
             </div>
-            
           </div>
         </div>
-        
       </div>
     </div>
   );

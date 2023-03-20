@@ -7,7 +7,7 @@ function App() {
 
   // const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=07527b2eec7fabe9f6abacccea305013`;
 
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=imperial&appid=07527b2eec7fabe9f6abacccea305013`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=07527b2eec7fabe9f6abacccea305013`;
   const handleSearch = (event) => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
@@ -35,7 +35,7 @@ function App() {
             {data.city ? <p>{data.city.name}</p> : null}
           </div>
           <div className="temp">
-            {data.list ? <h1>{data.list[0].main.temp} F</h1> : null}
+            {data.list ? <h1>{data.list[0].main.temp.toFixed()}°C</h1> : null}
           </div>
           <div className="description">
             {data.list ? <p>{data.list[0].weather[0].main}</p> : null}
@@ -45,7 +45,7 @@ function App() {
         <div className="bottom">
           <div className="feels">
             {data.list ? (
-              <p className="bold">{data.list[0].main.feels_like}</p>
+              <p className="bold">{data.list[0].main.feels_like.toFixed()}°C</p>
             ) : null}
             <p>Feels like</p>
           </div>
@@ -128,7 +128,7 @@ function App() {
                       })}
                     </p>
                     <p>{item.weather[0].main}</p>
-                    <p>{item.main.temp.toFixed()} F</p>
+                    <p>{item.main.temp.toFixed()}°C</p>
                   </div>
                 ))}
             </div>
@@ -148,7 +148,7 @@ function App() {
                       })}
                     </p>
                     <p>{item.weather[0].main}</p>
-                    <p>{item.main.temp.toFixed()} F</p>
+                    <p>{item.main.temp.toFixed()}°C</p>
                   </div>
                 ))}
             </div>
@@ -168,7 +168,7 @@ function App() {
                       })}
                     </p>
                     <p>{item.weather[0].main}</p>
-                    <p>{item.main.temp.toFixed()} F</p>
+                    <p>{item.main.temp.toFixed()}°C</p>
                   </div>
                 ))}
             </div>
